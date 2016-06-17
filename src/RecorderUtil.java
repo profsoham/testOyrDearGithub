@@ -4,14 +4,19 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.Serializable;
 
 import javax.imageio.ImageIO;
 
 import movie.maker.vilius.kraujutis.lt.JpegImagesToMovie;
 
-class RecorderUtil implements Runnable
+class RecorderUtil implements Runnable,Serializable
 {
-    private Robot robot=null;
+    /**
+	 * this is a change
+	 */
+	private static final long serialVersionUID = 5126645474182537902L;
+	private Robot robot=null;
     private File folder=null;
     private boolean stopFlag=false;
     private Thread thread=null;
